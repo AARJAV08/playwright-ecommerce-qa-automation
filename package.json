@@ -1,0 +1,29 @@
+{
+  "name": "playwright-ecommerce-qa-automation",
+  "version": "1.0.0",
+  "description": "End-to-end UI and API test automation framework for an e-commerce application, built with Playwright and TypeScript.",
+  "private": true,
+  "scripts": {
+    "test": "playwright test",
+    "test:smoke": "playwright test --grep @smoke",
+    "test:regression": "playwright test --grep @regression",
+    "test:ui": "playwright test --project=chromium --project=firefox --project=webkit",
+    "test:api": "playwright test --project=api",
+    "test:chromium": "playwright test --project=chromium",
+    "test:firefox": "playwright test --project=firefox",
+    "test:webkit": "playwright test --project=webkit",
+    "test:headed": "playwright test --project=chromium --headed",
+    "test:debug": "playwright test --project=chromium --debug",
+    "test:ui-mode": "playwright test --ui",
+    "report": "playwright show-report",
+    "typecheck": "tsc --noEmit",
+    "codegen": "playwright codegen https://www.saucedemo.com"
+  },
+  "keywords": ["playwright", "typescript", "qa", "test-automation", "e-commerce", "page-object-model"],
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.64.0",
+    "@types/node": "^22.0.0",
+    "typescript": "^5.9.0"
+  }
+}
